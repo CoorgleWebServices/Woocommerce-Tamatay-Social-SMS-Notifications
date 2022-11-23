@@ -56,8 +56,8 @@ function tamatay_social_sms_envia_sms( $tamatay_social_sms_settings, $telefono, 
 			break;
 		case "waapi":
  			$url						= add_query_arg( [
- 				'client_id'					=> $tamatay_social_sms_settings[ 'usuario_waapi' ],
- 				'instance'					=> $tamatay_social_sms_settings[ 'contrasena_waapi' ],
+ 				'access_token'					=> $tamatay_social_sms_settings[ 'usuario_waapi' ],
+ 				'instance_id'					=> $tamatay_social_sms_settings[ 'contrasena_waapi' ],
 				'type'						=> 'text',
 				'number'					=> $telefono,
  				'message'					=> tamatay_social_sms_codifica_el_mensaje( $mensaje ),
@@ -67,7 +67,7 @@ function tamatay_social_sms_envia_sms( $tamatay_social_sms_settings, $telefono, 
             
 			break;
 	}
-
+    
     //Envía el correo con el informe
 	if ( isset( $tamatay_social_sms_settings[ 'debug' ] ) && $tamatay_social_sms_settings[ 'debug' ] == "1" && isset( $tamatay_social_sms_settings[ 'campo_debug' ] ) ) {
 		$correo	= __( 'Mobile number:', 'woocommerce-tamatay-social-sms-notifications' ) . "\r\n" . $telefono . "\r\n\r\n";
