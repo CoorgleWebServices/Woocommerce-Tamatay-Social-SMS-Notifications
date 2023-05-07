@@ -11,14 +11,14 @@ $tab    = 1;
 if ( $tamatay_social_sms_settings ) {    
     foreach ( $mensajes as $mensaje ) {
         if ( function_exists( 'icl_register_string' ) || ! $wpml_activo ) { //Versión anterior a la 3.2
-            $$mensaje		= ( $wpml_activo ) ? icl_translate( 'tamatay_social_sms', $mensaje, esc_textarea( $tamatay_social_sms_settings[ $mensaje ] ) ) : esc_textarea( $tamatay_social_sms_settings[ $mensaje ] );
+            $mensaje		= ( $wpml_activo ) ? icl_translate( 'tamatay_social_sms', $mensaje, esc_textarea( $tamatay_social_sms_settings[ $mensaje ] ) ) : esc_textarea( $tamatay_social_sms_settings[ $mensaje ] );
         } else if ( $wpml_activo ) { //Versión 3.2 o superior
-            $$mensaje		= apply_filters( 'wpml_translate_single_string', esc_textarea( $tamatay_social_sms_settings[ $mensaje ] ), 'tamatay_social_sms', $mensaje );
+            $mensaje		= apply_filters( 'wpml_translate_single_string', esc_textarea( $tamatay_social_sms_settings[ $mensaje ] ), 'tamatay_social_sms', $mensaje );
         }
     }
 } else { //Inicializa variables
     foreach ( $mensajes as $mensaje ) {
-        $$mensaje   = '';
+        $mensaje   = '';
     }
 }
 
