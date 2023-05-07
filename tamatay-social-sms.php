@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WC - Tamatay Social SMS Notifications
+Plugin Name: Tamatay Social SMS Notifications for WooCommerce
 Version: 2.25
 Plugin URI: https://wordpress.org/plugins/woocommerce-tamatay-social-sms-notifications/
 Description: Add to WooCommerce SMS notifications to your clients for order status changes. Also you can receive an SMS message when the shop get a new order and select if you want to send international SMS. The plugin add the international dial code automatically to the client phone number.
