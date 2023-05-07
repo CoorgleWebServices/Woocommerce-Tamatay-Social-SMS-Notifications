@@ -61,7 +61,7 @@ function tamatay_social_sms_envia_sms( $tamatay_social_sms_settings, $telefono, 
 				'type'						=> 'text',
 				'number'					=> $telefono,
  				'message'					=> tamatay_social_sms_codifica_el_mensaje( $mensaje ),
- 			], 'https://app.tamatay.com/api/send.php' );
+ 			], 'https://app.tamatay.com/api/send' );
             
  			$respuesta					= wp_remote_get( $url );
             
